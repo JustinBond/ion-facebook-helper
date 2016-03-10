@@ -39,7 +39,8 @@ Clicking the button wraps up several stages of functionality. They will be
 taken to the Facebook native login dialogue. If they authenticate successfully, 
 then the label for the button will be updated from *Login Facebook* to *Logout 
 Facebook*. Clicking the button again would then log them out of Facebook. 
-Finally, their Facebook profile and friends list will be downloaded and saved.
+Finally, their Facebook profile and friends list will be downloaded and saved
+to Ionic's LocalStorage.
 
 ## Calling a RESTful Server
 
