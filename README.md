@@ -42,6 +42,9 @@ ionic run android
 
 ## Installation Method B - Drop in the files
 
-1. Copy the ionFacebookHelper.js file into your javascript directory 
-2. Make sure ionFacebookHelpper is injected into your app: angular.module('myFacebookApp', ['ionic', 'IonFacebookHelper'])
-3. You may wish to copy the controllers.js as well, or just look at it and write your own.
+Copy the ionFacebookHelper.js file into your javascript directory 
+Make sure ionFacebookHelpper is injected into your app.js: 
+```
+angular.module('myFacebookApp', ['ionic', 'IonFacebookHelper'])
+```
+You may wish to copy the controllers.js as well, or just look at it and write your own.
