@@ -15,26 +15,26 @@ The [Phonegap Facebook Plugin](https://github.com/Wizcorp/phonegap-facebook-plug
 
 ## Installation Method A - Clone the Respository
 
-1. Install the [Ionic Framework](http://ionicframework.com/getting-started/)
-2. Create and Authorize your Facebook App
-3. Clone the repository: 
+Install the [Ionic Framework](http://ionicframework.com/getting-started/)
+Create and Authorize your Facebook App
+Clone the repository: 
 ```
 git clone https://github.com/JustinBond/ion-facebook-helper
 ```
-4. Add a platform:
+Add a platform:
 ```
 cd ion-facebook-helper
 git platform add android
 ```
-5. Install the Phonegap-Facebook-Plugin: 
+Install the Phonegap-Facebook-Plugin: 
 ```
 cordova plugin add https://github.com/Wizcorp/phonegap-facebook-plugin/ --variable APP_ID="YOUR_FACEBOOK_APP_ID" --variable APP_NAME="YOUR_FACEBOOK_APP_DISPLAY_NAME"
 ```
-6. Install the Phonegap Facebook Whitelist plugin: 
+Install the Phonegap Facebook Whitelist plugin: 
 ```
 ionic plugin add https://github.com/apache/cordova-plugin-whitelist
 ```
-7. Build and run (note that plugins cannot be run out of ionic serve): 
+Build and run (note that plugins cannot be run out of ionic serve): 
 ```
 ionic run android
 ```
@@ -44,3 +44,4 @@ ionic run android
 
 1. Copy the ionFacebookHelper.js file into your javascript directory 
 2. Make sure ionFacebookHelpper is injected into your app: angular.module('myFacebookApp', ['ionic', 'IonFacebookHelper'])
+3. You may wish to copy the controllers.js as well, or just look at it and write your own.
