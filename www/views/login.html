@@ -1,0 +1,18 @@
+<ion-view hide-nav-bar="true" cache-view="false">
+  <ion-content class="login-view" scroll="false">
+    <div class="row">
+      <div class="col-50 col-offset-25">
+        <button class="button button-block button-positive" ui-sref="profile">My Profile</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-50 col-offset-25">
+        <button class="button button-block button-positive" ui-sref="friends">Facebook Friends</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-50 col-offset-25">
+        <button class="button button-block button-positive" ng-click="facebookButtonPressed()">{{facebookButtonLabel}}</button>
+      </div>
+  </ion-content>
+</ion-view>

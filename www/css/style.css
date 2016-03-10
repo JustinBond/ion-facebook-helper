@@ -1,0 +1,6 @@
+/* Empty. Add your own CSS if you like */
+.login-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
