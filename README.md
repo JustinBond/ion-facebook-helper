@@ -4,12 +4,10 @@ The [Phonegap Facebook Plugin](https://github.com/Wizcorp/phonegap-facebook-plug
 
 ## Features
 
-* AngularJS service to manage your login session.
-* AngularJS service to call the Facebook Graph to get profile information.
-* AngularJS service to call the Facebook Graph to get your friends list and parse the results.
-* Ionic LocalStorage is used to persistently save login, profile, and friends until you logout.
-* AngularJS service to manage the text for a Facebook login/logout button.
-* AngularJS controller with basic functionality for clicking login, profile, and friends buttons that can be further customized by the programmer.
+* Manage login sessions.
+* Get, parse and save login, profile, and friends until you logout.
+* Manage the text for a Facebook login/logout button.
+* AngularJS controllers with basic functionality for clicking login, profile, and friends buttons that can be further customized by the programmer.
 
 ## Alternatives
 
@@ -19,12 +17,28 @@ The [Phonegap Facebook Plugin](https://github.com/Wizcorp/phonegap-facebook-plug
 
 1. Install the [Ionic Framework](http://ionicframework.com/getting-started/)
 2. Create and Authorize your Facebook App
-3. Clone the repository: git clone https://github.com/JustinBond/ion-facebook-helper
-4. cd ion-facebook-helper
-4. Add a platform: git platform add android
-5. Install the Phonegap-Facebook-Plugin: cordova plugin add https://github.com/Wizcorp/phonegap-facebook-plugin/ --variable APP_ID="YOUR_FACEBOOK_APP_ID" --variable APP_NAME="YOUR_FACEBOOK_APP_DISPLAY_NAME"
-6. Install the Phonegap Facebook Whitelist plugin: ionic plugin add https://github.com/apache/cordova-plugin-whitelist
-7. Build and run (note that plugins cannot be run out of ionic serve): ionic run android
+3. Clone the repository: 
+```
+git clone https://github.com/JustinBond/ion-facebook-helper
+```
+4. Add a platform:
+```
+cd ion-facebook-helper
+git platform add android
+```
+5. Install the Phonegap-Facebook-Plugin: 
+```
+cordova plugin add https://github.com/Wizcorp/phonegap-facebook-plugin/ --variable APP_ID="YOUR_FACEBOOK_APP_ID" --variable APP_NAME="YOUR_FACEBOOK_APP_DISPLAY_NAME"
+```
+6. Install the Phonegap Facebook Whitelist plugin: 
+```
+ionic plugin add https://github.com/apache/cordova-plugin-whitelist
+```
+7. Build and run (note that plugins cannot be run out of ionic serve): 
+```
+ionic run android
+```
+
 
 ## Installation Method B - Drop in the files
 
