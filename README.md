@@ -10,12 +10,19 @@ The [Phonegap Facebook Plugin](https://github.com/Wizcorp/phonegap-facebook-plug
 
 ```
 Install the [Ionic Framework](http://ionicframework.com/getting-started/)
+
 Create and Authorize your Facebook App
+
 git clone https://github.com/JustinBond/ion-facebook-helper
+
 cd ion-facebook-helper
+
 git platform add android
+
 cordova plugin add https://github.com/Wizcorp/phonegap-facebook-plugin/ --variable APP_ID="YOUR_FACEBOOK_APP_ID" --variable APP_NAME="YOUR_FACEBOOK_APP_DISPLAY_NAME"
+
 ionic plugin add https://github.com/apache/cordova-plugin-whitelist
+
 ionic run android
 ```
 Note that you cannot use ionic serve with the plugin.
@@ -28,10 +35,19 @@ All you need to do is put in the button somehwere in your app:
 <button class="button button-block button-positive" ng-click="facebookButtonPressed()">{{facebookButtonLabel}}</button>
 ```
 
-When the user clicks the button the following will happen:
-1. They will be taken to the Facebook plugin's native login dialogue.
-2. The text for the button will update from "Login Facebook" to "Logout Facebook". A subsequent press of the button will log them out.
-3. The user's profile and friends list will be downloaded and restored.
+Clicking the button wraps up several stages of functionality. They will be 
+taken to the Facebook native login dialogue. If they authenticate successfully, 
+then the label for the button will be updated from *Login Facebook* to *Logout 
+Facebook*. Clicking the button again would then log them out of Facebook. 
+Finally, their Facebook profile and friends list will be downloaded and saved.
+
+## Calling a RESTful Server
+
+For many apps, logging into Facebook is the first step to getting an Access 
+Token which is then used to authenticate on your back-end server. The easiest 
+way to accomplish that would be to modify the loginToggle() function in 
+controllers.js. It uses AngularJS promises and already has several promises 
+chained together, so it should be easy to add in one extra promise.
 
 ## Get your access token and profile info
 
