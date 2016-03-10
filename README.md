@@ -30,8 +30,37 @@ All you need to do is put in the button somehwere in your app:
 
 When the user clicks the button the following will happen:
 1. They will be taken to the Facebook plugin's native login dialogue.
-2. When they return, the text for the button will update from "Login Facebook"
-to "Logout Facebook". A subsequent press of the button will log them out.
+2. The text for the button will update from "Login Facebook" to "Logout Facebook". A subsequent press of the button will log them out.
 3. The user's profile and friends list will be downloaded and restored.
+
+## Get your access token and profile info
+
+In the controller for whichever view you need it, add the following code:
+```
+$scope.accessToken = FacebookLogin.getAccessToken();
+$scope.name = FacebookLogin.getName();
+$scope.email = FacebookLogin.getEmail();
+$scope.pic = FacebookLogin.getPic();
+$scope.facebookID = FacebookLogin.getFacebookID();
+```
+
+## Get your friends list
+
+In the controller for whichever view you need it, add the following code:
+```
+$scope.friends = FacebookLogin.getFriends();
+```
+
+Then in your view add html like the following:
+```
+<div class="row">
+  <ul>
+    <li ng-repeat="friend in friends">Name: {{friend.name}} ID: {{friend.id}}</li>
+  </ul>
+</div>
+```
+
+
+
 
 
