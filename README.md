@@ -8,31 +8,30 @@ The [Phonegap Facebook Plugin](https://github.com/Wizcorp/phonegap-facebook-plug
 
 ## Installation Method
 
-It is easy to install by simply cloning the repository, but all you really need is ionFacebookHelper.js so you may just want to grab that and ignore the rest of the installation instructions.
-
+```
 Install the [Ionic Framework](http://ionicframework.com/getting-started/)
 Create and Authorize your Facebook App
-Clone the repository: 
-```
 git clone https://github.com/JustinBond/ion-facebook-helper
-```
-Add a platform:
-```
 cd ion-facebook-helper
 git platform add android
-```
-Install the Phonegap-Facebook-Plugin: 
-```
 cordova plugin add https://github.com/Wizcorp/phonegap-facebook-plugin/ --variable APP_ID="YOUR_FACEBOOK_APP_ID" --variable APP_NAME="YOUR_FACEBOOK_APP_DISPLAY_NAME"
-```
-Install the Phonegap Facebook Whitelist plugin: 
-```
 ionic plugin add https://github.com/apache/cordova-plugin-whitelist
-```
-Build and run (note that plugins cannot be run out of ionic serve): 
-```
 ionic run android
 ```
+Note that you cannot use ionic serve with the plugin.
 
 ## Login to Facebook
+
+All you need to do is put in the button somehwere in your app:
+
+```
+<button class="button button-block button-positive" ng-click="facebookButtonPressed()">{{facebookButtonLabel}}</button>
+```
+
+When the user clicks the button the following will happen:
+1. They will be taken to the Facebook plugin's native login dialogue.
+2. When they return, the text for the button will update from "Login Facebook"
+to "Logout Facebook". A subsequent press of the button will log them out.
+3. The user's profile and friends list will be downloaded and restored.
+
 
