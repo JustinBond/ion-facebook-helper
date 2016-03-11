@@ -16,14 +16,19 @@ cd ion-facebook-helper
 git platform add android
 cordova plugin add https://github.com/Wizcorp/phonegap-facebook-plugin/ --variable APP_ID="YOUR_FACEBOOK_APP_ID" --variable APP_NAME="YOUR_FACEBOOK_APP_DISPLAY_NAME"
 ionic plugin add https://github.com/apache/cordova-plugin-whitelist
-ionic run android
 ```
+Note: you cannot use `ionic serve` with the Phonegap Facebook plugin.
 
-Note that you cannot use ionic serve with the plugin.
+The Ion Facebook Helper has already been injected into the sample Ionic project.
+But if you are building your own app from scratch be sure to inject 
+ionFacebookHelper into your app.js 
+```
+angular.module('starter', ['ionic', 'ifhControllers', 'IonFacebookHelper'])
+```
 
 ## Login to Facebook
 
-All you need to do is put in the button somehwere in your app:
+Put in the button somehwere in your app:
 
 ```
 <button class="button button-block button-positive" ng-click="facebookButtonPressed()">{{facebookButtonLabel}}</button>
@@ -51,7 +56,7 @@ In the controller for whichever view you need it, add the following code:
 $scope.accessToken = FacebookLogin.getAccessToken();
 $scope.name = FacebookLogin.getName();
 $scope.email = FacebookLogin.getEmail();
-$scope.pic = FacebookLogin.getPic();
+$scope.pic = FacebookLogin.getPic();		// returns the URL to your profile pic
 $scope.facebookID = FacebookLogin.getFacebookID();
 ```
 
@@ -70,6 +75,7 @@ Then in your view add html like the following:
   </ul>
 </div>
 ```
+
 
 
 
