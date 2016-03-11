@@ -1,4 +1,4 @@
-angular.module('controllers', [])
+angular.module('ifhControllers', [])
 
 .controller('LoginCtrl', function($scope, Notification, FacebookLogin) {
   $scope.facebookButtonLabel = FacebookLogin.getLabel();
@@ -50,4 +50,5 @@ angular.module('controllers', [])
 
 .controller('FriendsCtrl', function($scope, FacebookLogin) {
   $scope.friends = FacebookLogin.getFriends();
+  console.log("Final friends list: ", $scope.friends);
 });

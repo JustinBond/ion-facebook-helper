@@ -117,7 +117,7 @@ mod.service('FacebookFriends', ['$localstorage', function($localstorage) {
   function Friend(name, id) {
     this.name = name;
     this.id = id;
-    //this.pic = "http://graph.facebook.com/" + id + "/picture?type=large";
+    this.pic = "http://graph.facebook.com/" + id + "/picture?type=large";
   }
 
   this.addFriend = function(name, facebookID) {
