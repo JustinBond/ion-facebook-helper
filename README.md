@@ -8,23 +8,17 @@ The [Phonegap Facebook Plugin](https://github.com/Wizcorp/phonegap-facebook-plug
 
 ## Installation Method
 
+This assumes that you have installed Ionic and created and authorized your Facebook app.
+
 ```
-Install the [Ionic Framework](http://ionicframework.com/getting-started/)
-
-Create and Authorize your Facebook App
-
 git clone https://github.com/JustinBond/ion-facebook-helper
-
 cd ion-facebook-helper
-
 git platform add android
-
 cordova plugin add https://github.com/Wizcorp/phonegap-facebook-plugin/ --variable APP_ID="YOUR_FACEBOOK_APP_ID" --variable APP_NAME="YOUR_FACEBOOK_APP_DISPLAY_NAME"
-
 ionic plugin add https://github.com/apache/cordova-plugin-whitelist
-
 ionic run android
 ```
+
 Note that you cannot use ionic serve with the plugin.
 
 ## Login to Facebook
