@@ -2,10 +2,6 @@
 
 The [Phonegap Facebook Plugin](https://github.com/Wizcorp/phonegap-facebook-plugin) is a great way to accomplish native Facebook logins, but there are two problems that most programmers will bump into. The first is that the plugin only provides a minimalist API that requires significant coding to integrate into your application. The second is that many tutorials on how to integrate the plugin into your app put the logic into AngularJS controllers, which is the wrong location. This project solves both problems by leveraging the [Ionic Framework](http://ionicframework.com), in particular AngularJS and LocalStorage. Another problem that this project solves is that many web tutorials 
 
-## Alternatives
-
-* ngcordova is a great choice (although at the time I began this project that name of the Facebook plugin but ngCordova had not updated the name, making it incompatible with recent versions of the plugin).
-
 ## Installation Method
 
 This assumes that you have installed Ionic and created and authorized your Facebook app.
@@ -46,7 +42,7 @@ to Ionic's LocalStorage.
 For many apps, logging into Facebook is the first step to getting an Access 
 Token which is then used to authenticate on your back-end server. The easiest 
 way to accomplish that would be to modify the loginToggle() function in 
-controllers.js. It uses AngularJS promises and already has several promises 
+ifhControllers.js. It uses AngularJS promises and already has several promises 
 chained together, so it should be easy to add in one extra promise.
 
 ## Get your access token and profile info
